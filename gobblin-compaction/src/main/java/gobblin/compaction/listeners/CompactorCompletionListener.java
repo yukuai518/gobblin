@@ -12,10 +12,11 @@
 
 
 package gobblin.compaction.listeners;
-
-import gobblin.compaction.mapreduce.MRCompactor;
+import java.util.Set;
+import org.joda.time.DateTime;
+import gobblin.compaction.dataset.Dataset;
 
 
 public interface CompactorCompletionListener {
-  void onCompactionCompletion(MRCompactor compactor);
+  void onCompactionCompletion (DateTime intializeTime, Set<Dataset> datasets);
 }
